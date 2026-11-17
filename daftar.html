@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulir pendaftaran online BloomForm.">
+
+    <title>Formulir Pendaftaran — BloomForm</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <div class="announcement">
+        ✿ Pendaftaran online jadi lebih mudah, praktis, dan nyaman
+    </div>
+
+    <header class="site-header">
+        <a class="brand" href="index.html">
+            <span class="brand-mark">b.</span>
+            <span>Bloom<span class="brand-light">Form</span></span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+
+        <nav class="nav">
+            <a href="index.html">Beranda</a>
+            <a class="active" href="daftar.html">Pendaftaran</a>
+            <a href="tentang.html">Tentang</a>
+            <button class="theme-toggle" type="button" aria-label="Ganti tema">☼</button>
+            <a class="nav-cta" href="daftar.html">Mulai Daftar <span>↗️</span></a>
+        </nav>
+    </header>
+
+    <main class="form-page container">
+
+        <div class="form-intro">
+
+            <span class="eyebrow">
+                <span class="eyebrow-dot"></span>
+                FORMULIR ONLINE
+            </span>
+
+            <h1>
+                Yuk, lengkapi<br>
+                <em>pendaftaranmu.</em>
+            </h1>
+
+            <p>
+                Isi informasi di bawah ini dengan benar.
+                Pastikan email yang kamu masukkan masih aktif.
+            </p>
+
+            <div class="form-side-note">
+                <span>♡</span>
+                <div>
+                    <b>Hanya beberapa menit</b>
+                    <small>Isi data sesuai identitas yang benar.</small>
+                </div>
+            </div>
+
+            <div class="side-decoration">✿</div>
+        </div>
+
+        <section class="form-card">
+
+            <div class="form-card-heading">
+                <div>
+                    <span class="eyebrow">BLOOMFORM / 01</span>
+                    <h2>Data pendaftaran</h2>
+                </div>
+
+                <span class="required-note">* Wajib diisi</span>
+            </div>
+
+            <form id="registrationForm">
+
+                <div class="field-row">
+
+                    <div class="field">
+                        <label for="nama">Nama lengkap <span>*</span></label>
+                        <input
+                            id="nama"
+                            name="Nama Lengkap"
+                            type="text"
+                            placeholder="Masukkan nama lengkap"
+                            minlength="3"
+                            maxlength="80"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Alamat email <span>*</span></label>
+                        <input
+                            id="email"
+                            name="Email Pendaftar"
+                            type="email"
+                            placeholder="nama@email.com"
+                            maxlength="100"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="field-row">
+
+                    <div class="field">
+                        <label for="telepon">Nomor WhatsApp <span>*</span></label>
+                        <input
+                            id="telepon"
+                            name="Nomor WhatsApp"
+                            type="tel"
+                            inputmode="tel"
+                            placeholder="08xxxxxxxxxx"
+                            pattern="[0-9+() -]{9,18}"
+                            required>
+                    </div>
+
+                    <div class="field">
+                        <label for="tanggal">Tanggal lahir <span>*</span></label>
+                        <input
+                            id="tanggal"
+                            name="Tanggal Lahir"
+                            type="date"
+                            required>
+                    </div>
+
+                </div>
+
+                <div class="field-row">
+
+                    <div class="field">
+                        <label for="jenis">Jenis kelamin <span>*</span></label>
+
+                        <select id="jenis" name="Jenis Kelamin" required>
+                            <option value="">Pilih jenis kelamin</option>
+                            <option>Perempuan</option>
+                            <option>Laki-laki</option>
+                            <option>Tidak ingin menyebutkan</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="kategori">Kategori pendaftaran <span>*</span></label>
+
+                        <select id="kategori" name="Kategori Pendaftaran" required>
+                            <option value="">Pilih kategori</option>
+                            <option>Peserta umum</option>
+                            <option>Pelajar / Mahasiswa</option>
+                            <option>Lainnya</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="field">
+                    <label for="alamat">Alamat lengkap <span>*</span></label>
+
+                    <textarea
+                        id="alamat"
+                        name="Alamat"
+                        rows="3"
+                        placeholder="Jalan, desa/kelurahan, kecamatan, kabupaten..."
+                        minlength="8"
+                        maxlength="300"
+                        required></textarea>
+                </div>
+
+                <div class="field">
+                    <label for="alasan">
+                        Catatan tambahan <small>(opsional)</small>
+                    </label>
+
+                    <textarea
+                        id="alasan"
+                        name="Catatan Tambahan"
+                        rows="3"
+                        placeholder="Tuliskan informasi tambahan jika ada..."
+                        maxlength="500"></textarea>
+                </div>
+
+                <label class="consent">
+                    <input type="checkbox" id="persetujuan" required>
+
+                    <span>
+                        Saya memastikan bahwa data yang diisi sudah benar
+                        dan bersedia mengirimkannya untuk keperluan pendaftaran.
+                        <b>*</b>
+                    </span>
+                </label>
+
+                <input type="hidden" name="_subject" value="Pendaftaran Baru - BloomForm">
+
+                <input
+                    type="text"
+                    name="_honey"
+                    class="honey"
+                    tabindex="-1"
+                    autocomplete="off">
+
+                <button class="button button-primary submit-button" id="submitButton" type="submit">
+                    Kirim Pendaftaran <span>↗️</span>
+                </button>
+
+                <p class="form-privacy">
+                    Data pendaftaran akan diteruskan ke email pengelola.
+                    Jangan masukkan informasi yang bersifat rahasia.
+                </p>
+
+                <div class="form-message" id="formMessage" role="status" aria-live="polite"></div>
+
+            </form>
+
+            <div class="success-panel" id="successPanel" hidden>
+                <div class="success-symbol">✓</div>
+
+                <h2>Terima kasih!</h2>
+
+                <p>
+                    Formulir pendaftaran berhasil dikirim.
+                    Data kamu sudah diteruskan ke email pengelola.
+                </p>
+
+                <a class="button button-primary" href="index.html">
+                    Kembali ke Beranda
+                </a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+
+            <a class="brand" href="index.html">
+                <span class="brand-mark">b.</span>
+                <span>Bloom<span class="brand-light">Form</span></span>
+            </a>
+
+            <span>
+                © <span class="year"></span>
+                BloomForm. Dibuat untuk proyek Cloud Computing.
+            </span>
+
+            <a href="tentang.html">Tentang proyek ↗️</a>
+
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script src="assets/form.js"></script>
+</body>
+</html>
